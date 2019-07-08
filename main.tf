@@ -1,20 +1,19 @@
 # Variables 
 
-variable "secret_name" {
+variable "name" {
   description = "Name of secret to store"
   type        = string
 }
 
-variable "secret_value" {
+variable "value" {
   description = "Secret value to store"
   type        = string
 }
 
-variable "secret_description" {
+variable "description" {
   type    = string
   default = "terraform-managed secret"
 }
-
 
 variable "tags" {
   description = "User-Defined tags"
@@ -36,10 +35,10 @@ resource "aws_secretsmanager_secret_version" "secret" {
 
 # Outputs
 
-output "aws_secretmanager_secret" {
+output "secret" {
   value = aws_secretsmanager_secret.secret
 }
 
-output "aws_secretmanager_secret_version" {
+output "secret_version" {
   value = aws_secretsmanager_secret_version.secret
 }

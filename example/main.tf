@@ -5,8 +5,8 @@ provider "aws" {
 module "secret" {
   source = "../"
   
-  secret_name  = "dummy-secret"
-  secret_value = "password"
+  name  = "dummy-secret"
+  value = "password"
   tags = {
       whodunnit = "steven"
       why       = "example"
@@ -14,9 +14,9 @@ module "secret" {
 }
 
 output "secret" {
-  value = module.secret.aws_secretmanager_secret
+  value = module.secret.secret
 }
 
 output "secret_version" {
-  value = module.secret.aws_secretmanager_secret_version
+  value = module.secret.secret_version
 }
