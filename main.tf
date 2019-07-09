@@ -24,7 +24,7 @@ variable "tags" {
 # Resources 
 
 resource "aws_secretsmanager_secret" "secret" {
-  name = var.name
+  name_prefix = var.name
   tags = var.tags
 }
 
