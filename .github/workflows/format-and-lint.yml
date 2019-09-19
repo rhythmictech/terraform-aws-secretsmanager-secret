@@ -1,0 +1,20 @@
+name: format-and-lint
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Install prereq
+      run: |
+        brew install docker tfenv tflint
+        tfenv install
+        
+    - name: tf fmt
+      run: |
+        terraform fmt
+    - name: tflint
+      run: |
+        tflint
