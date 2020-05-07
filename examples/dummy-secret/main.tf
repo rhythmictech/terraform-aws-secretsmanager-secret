@@ -7,16 +7,10 @@ module "secret" {
   
   name  = "dummy-secret"
   value = "password"
+  policy = data.template_file.example.rendered # Optional
+  kms_key_id = "arn:aws:kms:aws-region:account-id:key/key-id" # Optional
   tags = {
       whodunnit = "steven"
       why       = "example"
   }
-}
-
-output "secret" {
-  value = module.secret.secret
-}
-
-output "secret_version" {
-  value = module.secret.secret_version
 }
