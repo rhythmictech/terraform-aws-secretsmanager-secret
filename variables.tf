@@ -1,4 +1,4 @@
-# Variables 
+# Variables
 
 variable "name" {
   description = "Name of secret to store"
