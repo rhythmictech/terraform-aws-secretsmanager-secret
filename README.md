@@ -3,6 +3,40 @@
 
 Simple secret module for AWS secretsmanager
 
+## Examples
+
+### With a String
+```hcl
+module "secret" {
+  source  = "rhythmictech/secretsmanager-secret/aws"
+  version = "0.1.0"
+
+  name  = "my-secret-string"
+  value = var.my_secret_string
+
+  tags = {
+      encoding = "none"
+      type     = "string"
+  }
+}
+```
+
+### With a file
+```hcl
+module "secret" {
+  source  = "rhythmictech/secretsmanager-secret/aws"
+  version = "0.1.0"
+
+  name  = "my-secret-file-base64-encoded"
+  value = base64encode(var.my_secret_file)
+
+  tags = {
+      encoding = "base64"
+      type     = "file"
+  }
+}
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
