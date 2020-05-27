@@ -65,8 +65,8 @@ module "secret" {
 
 | Name | Description |
 |------|-------------|
-| secret | n/a |
-| secret\_version | n/a |
+| secret | AWS SecretManager Secret resource |
+| secret\_version | AWS SecretManager Secret Version resource |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
