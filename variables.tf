@@ -8,6 +8,7 @@ variable "name" {
 variable "value" {
   description = "Secret value to store"
   type        = string
+  default     = ""
 }
 
 variable "description" {
@@ -29,4 +30,10 @@ variable "policy" {
 variable "kms_key_id" {
   description = "Optional. The KMS Key ID to encrypt the secret. KMS key arn or alias can be used."
   default     = null
+}
+
+variable "secrets" {
+  description = "User-Defined secrets"
+  type        = map(string)
+  default     = {}
 }
