@@ -6,12 +6,12 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v1
-    
+
     - name: Install prereq
       run: |
         brew install docker tfenv tflint
         tfenv install
-        
+
     - name: tf fmt
       run: |
         terraform fmt

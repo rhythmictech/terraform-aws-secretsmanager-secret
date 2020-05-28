@@ -1,9 +1,10 @@
-# Outputs
 
 output "secret" {
-  value = aws_secretsmanager_secret.secret
+  description = "AWS SecretManager Secret resource"
+  value       = aws_secretsmanager_secret.secret
 }
 
 output "secret_version" {
-  value = aws_secretsmanager_secret_version.secret
+  description = "AWS SecretManager Secret Version resource"
+  value       = aws_secretsmanager_secret_version.secret
 }
