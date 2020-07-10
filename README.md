@@ -65,6 +65,8 @@ module "secret" {
 
 | Name | Description |
 |------|-------------|
+| arn | AWS SecretManager Secret ARN |
+| id | AWS SecretManager Secret ARN |
 | secret | AWS SecretManager Secret resource |
 | secret\_version | AWS SecretManager Secret Version resource |
 
