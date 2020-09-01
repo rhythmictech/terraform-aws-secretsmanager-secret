@@ -9,7 +9,7 @@ Simple secret module for AWS secretsmanager
 ```hcl
 module "secret" {
   source  = "rhythmictech/secretsmanager-secret/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   name  = "my-secret-string"
   value = var.my_secret_string
@@ -25,7 +25,7 @@ module "secret" {
 ```hcl
 module "secret" {
   source  = "rhythmictech/secretsmanager-secret/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   name  = "my-secret-file-base64-encoded"
   value = base64encode(var.my_secret_file)
