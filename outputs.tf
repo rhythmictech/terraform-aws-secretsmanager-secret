@@ -17,4 +17,5 @@ output "secret" {
 output "secret_version" {
   description = "AWS SecretManager Secret Version resource"
   value       = aws_secretsmanager_secret_version.secret
+  sensitive   = true
 }
